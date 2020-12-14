@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class xcal {
 
@@ -51,6 +53,12 @@ public class xcal {
 		textField.setColumns(10);
 		
 		JButton btn7 = new JButton("7");
+		btn7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String enterNumber = textField.getText() + btn7.getText();
+				textField.setText(enterNumber);
+			}
+		});
 		btn7.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btn7.setBounds(30, 119, 50, 51);
 		frame.getContentPane().add(btn7);
@@ -66,7 +74,7 @@ public class xcal {
 		frame.getContentPane().add(btn9);
 		
 		JButton btnp = new JButton("+");
-		btnp.setFont(new Font("Tahoma", Font.BOLD, 18));
+		btnp.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnp.setBounds(210, 119, 50, 51);
 		frame.getContentPane().add(btnp);
 		
@@ -86,7 +94,7 @@ public class xcal {
 		frame.getContentPane().add(btn6);
 		
 		JButton btnm = new JButton("-");
-		btnm.setFont(new Font("Tahoma", Font.BOLD, 18));
+		btnm.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnm.setBounds(210, 180, 50, 51);
 		frame.getContentPane().add(btnm);
 		
@@ -106,7 +114,7 @@ public class xcal {
 		frame.getContentPane().add(btn3);
 		
 		JButton btnx = new JButton("*");
-		btnx.setFont(new Font("Tahoma", Font.BOLD, 18));
+		btnx.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnx.setBounds(210, 241, 50, 51);
 		frame.getContentPane().add(btnx);
 		
@@ -116,38 +124,38 @@ public class xcal {
 		frame.getContentPane().add(btn0);
 		
 		JButton btndot = new JButton(".");
-		btndot.setFont(new Font("Tahoma", Font.BOLD, 18));
+		btndot.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btndot.setBounds(90, 302, 50, 51);
 		frame.getContentPane().add(btndot);
 		
 		JButton btndivide = new JButton("/");
-		btndivide.setFont(new Font("Tahoma", Font.BOLD, 18));
+		btndivide.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btndivide.setBounds(150, 302, 50, 51);
 		frame.getContentPane().add(btndivide);
 		
 		JButton btnequal = new JButton("=");
-		btnequal.setFont(new Font("Tahoma", Font.BOLD, 18));
+		btnequal.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnequal.setBounds(210, 302, 50, 51);
 		frame.getContentPane().add(btnequal);
 		
-		JButton btnarrow = new JButton("7");
-		btnarrow.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btnarrow.setBounds(30, 58, 50, 51);
+		JButton btnarrow = new JButton("<-");
+		btnarrow.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnarrow.setBounds(32, 58, 48, 51);
 		frame.getContentPane().add(btnarrow);
 		
-		JButton btn8_1 = new JButton("8");
-		btn8_1.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btn8_1.setBounds(90, 58, 50, 51);
-		frame.getContentPane().add(btn8_1);
+		JButton clear = new JButton("c");
+		clear.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		clear.setBounds(90, 58, 50, 51);
+		frame.getContentPane().add(clear);
 		
-		JButton btn8_2 = new JButton("8");
-		btn8_2.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btn8_2.setBounds(150, 58, 50, 51);
-		frame.getContentPane().add(btn8_2);
+		JButton modulus = new JButton("%");
+		modulus.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		modulus.setBounds(150, 58, 50, 51);
+		frame.getContentPane().add(modulus);
 		
-		JButton btn8_3 = new JButton("8");
-		btn8_3.setFont(new Font("Tahoma", Font.BOLD, 18));
-		btn8_3.setBounds(210, 58, 50, 51);
-		frame.getContentPane().add(btn8_3);
+		JButton minus = new JButton("-");
+		minus.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		minus.setBounds(210, 58, 50, 51);
+		frame.getContentPane().add(minus);
 	}
 }
